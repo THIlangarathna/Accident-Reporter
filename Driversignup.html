@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Driver Sign Up</title>
+</head>
+<body>
+	 <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+	<link rel="stylesheet" type="text/css" href="Regis.css">
+	<script>
+		function Validate() {
+			var password = document.getElementById("password").value;
+			var confirmPassword = document.getElementById("confirm_password").value;
+			if (password != confirmPassword){
+				alert("You first Passwords is not similar with 2nd password. Please Check Again!");
+				return false;
+				}
+			return true;
+		}
+	</script>
+<div class="container">
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="main.php"><li>Home</li></a>
+      <a href="mainpolice.php"><li>Police Stations</li></a>
+      <a href="maininsurance.php"><li>Insurance Companies</li></a>
+      <a href="mainRDA.php"><li>RDA</li></a>
+      <a href="bargraph.php"><li>Accidents</li></a>
+      <a href="SignUpmain.html"><li>Sign Up</li></a>
+      <a href="Signinmain.html"><li>Log In</li></a>
+    </ul>
+  </div>
+</nav>
+
+	<!--topic-->
+
+        <center><h1 id="headtopic"><a href="main.php" style="text-decoration: none;color: white;">Mr.Reporter</a></h1></center>
+
+		<!--Registration Form-->
+<div id="loginform">
+<h2>Driver Registration</h2>
+<div id="inputlbl">
+<form action="DriverRegis.php" method="post" enctype="multipart/form-data">
+<div class="inputsnlables"><label>Name</label><input type="text" placeholder="Name" name="Name" required/></div>
+<div class="inputsnlables"><label>Address</label><input type="text" placeholder="Address" name="Address" required/></div>
+<div class="inputsnlables"><label>NIC</label><input type="text" placeholder="NIC" name="NIC" required/></div>
+<div class="inputsnlables"><label>License No</label><input type="text" placeholder="License" name="License" required/></div>
+<div class="inputsnlables"><label>Birthday</label><input type="Date" placeholder="Date" name="Date" required/></div>
+<div class="inputsnlables"><label>Gender</label><select name="Gender" type="text" style="padding:20px 0px;border:none;
+padding:20px 0px;
+background:transparent;
+width:230px;
+font-size:0.9em;">
+    			<option value="Male" type="text">Male</option>
+    			<option value="Female" type="text">Female</option>
+  			</select></div>
+<div class="inputsnlables"><label>Tel No</label><input type="text" placeholder="Telephone Number" name="TelNo" required/></div>
+<div class="inputsnlables"><label>Email</label><input type="text" placeholder="Email" name="Email" required/></div>
+<div class="inputsnlables"><label>Type of Vehicle</label><select name="Vehicle" type="text" style="padding:20px 0px;border:none;
+padding:20px 0px;
+background:transparent;
+width:230px;
+font-size:0.9em;">
+    			<option value="Car" type="text">Car</option>
+    			<option value="Van" type="text">Van</option>
+    			<option value="Jeep" type="text">Jeep</option>
+          <option value="Bus" type="text">Bus</option>
+    			<option value="Bike" type="text">Bike</option>
+    			<option value="Heavy Vehicle" type="text">Heavy Vehicle</option>
+    			<option value="Three Wheel" type="text">Three Wheel</option>
+  			</select></div>
+<div class="inputsnlables"><label>Insurance No</label><input type="text" placeholder="Insurance No" name="InsuranceNo" required/></div>
+<div class="inputsnlables"><label>Insurance Company</label><input type="text" placeholder="Insurance Company" name="InsuranceCom" required/></div>
+<div class="inputsnlables"><label>Vehicle Registration No</label><input type="text" placeholder="Vehicle No" name="VehicleNo" required/></div>
+<div class="inputsnlables"><label>Password</label><input type="password" placeholder="Enter Password" id="password" name="password" required/></div>
+<div class="inputsnlables"><label>Repeat Password</label><input type="password" placeholder="Repeat Password" name="confirm_password" id="confirm_password" required/></div>
+</div>
+<button type="submit" onclick="return Validate()"><b>Register</b></button>
+</div>
+
+</body>
+</html>
